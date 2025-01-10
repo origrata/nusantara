@@ -1,6 +1,6 @@
 # T-Guard v1.1
 Module Version:
-- **Wazuh:** v4.9.0
+- **Wazuh:** v4.9.2
 - **DFIR-IRIS:** v2.4.12
 - **Shuffle:** v1.4.2
 - **MISP:** v2.4.197
