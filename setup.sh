@@ -201,7 +201,7 @@ while true; do
         ;;
     13)
         # PoC/Use Case - Web Defacement Detection
-        cd usecase/slot-webdeface
+        cd usecase/webdeface
         IP=$(curl -s ip.me -4)
         sudo sed -i -e "s/(your_vm_ip)/$IP/g" ./server.js
         nohup node server.js > server.log 2>&1 &
