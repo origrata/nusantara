@@ -213,7 +213,7 @@ while true; do
             echo "Operation cancelled by the user."
             exit 1
         fi
-        cat slotwebdeface.html > index.html
+        cat webdeface.html > index.html
         echo "Your website defaced!! Refresh your browser."
         echo " "
         read -p "Do you want to recover your website? (y/n) " -r
