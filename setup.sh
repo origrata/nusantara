@@ -153,7 +153,7 @@ while true; do
     9)    
         # Integration VirusTotal <-> Wazuh
         # Setup Wazuh Agent
-        USECASE_DIR="$(pwd)/usecase/slot-webdeface"
+        USECASE_DIR="$(pwd)/usecase/webdeface"
         CONFIG_AGENT="$(pwd)/wazuh/custom-integrations/add_vtwazuh_config-agent.conf"
         cd wazuh/custom-integrations
         sed -i "s|<directories report_changes=\"yes\" whodata=\"yes\" realtime=\"yes\">\$USECASE_DIR</directories>|<directories report_changes=\"yes\" whodata=\"yes\" realtime=\"yes\">$USECASE_DIR</directories>|" "$CONFIG_AGENT"
