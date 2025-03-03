@@ -1,16 +1,4 @@
-# T-Guard v1.1
-Module Version:
-- **Wazuh:** v4.9.2
-- **DFIR-IRIS:** v2.4.12
-- **Shuffle:** v1.4.2
-- **MISP:** v2.4.197
-
-
-**What's Changed from T-Guard v1:**
-- Fixing integration issues between modules
-- Add script Wazuh-VirusTotal integration in setup
-- Add new use case: Malware and Web Defacement
-
+# T-Guard
 
 ## Overview
 T-Guard is an innovative security operations center (SOC) solution that leverages the strength of leading open-source tools to provide robust protection for your digital assets. Our integrated approach ensures comprehensive defense against a wide range of cyber threats, making your systems and data more secure than ever before. Join us in the fight against cybercrime with T-Guard.
