@@ -15,7 +15,8 @@ while true; do
                     "11" "PoC/Use Case - Brute Force Detection" \
                     "12" "PoC/Use Case - Malware Detection & Response" \
                     "13" "PoC/Use Case - Web Defacement Detection" \
-                    "14" "Show Module (Docker) Status" 3>&1 1>&2 2>&3)
+                    "14" "Show Module (Docker) Status" \
+                    "15" "Activate Swap Memory" 3>&1 1>&2 2>&3)
     # Script version 2.0 updated 3 Maret 2025
     # Depending on the chosen option, execute the corresponding command
     case $OPTION in
@@ -235,7 +236,21 @@ while true; do
         echo "Your website off."
         ;;
     14)
+        # Check docker status
         sudo docker ps
+        ;;
+    
+    15)
+        # Activate memory swap
+        sudo fallocate -l 2G /swapfile
+        sudo chmod 600 /swapfile
+        sudo mkswap /swapfile
+        sudo swapon /swapfile
+        sudo cp /etc/fstab /etc/fstab.bak
+        echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+        echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.conf
+        echo "vm.vfs_cache_pressure=50" | sudo tee -a /etc/sysctl.conf
+        sudo sysctl -p
         ;;
 esac
     # Give option to go back to the previous menu or exit
